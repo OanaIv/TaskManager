@@ -5,7 +5,7 @@ function App() {
   const data = [
   {
     id: "T-1",
-    name: "Create a Design System for Enum Workspace.",
+    name: "1Create a Design System for Enum Workspace.",
     status: "todo",
     dueDate: new Date(2022, 5, 23)
   },
