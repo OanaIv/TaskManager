@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import TaskViewer from './components/task-viewer/TaskViewer';
+import CreateTaskForm from './components/forms/CreateTaskForm';
 
 function App() {
   const data = [
@@ -42,25 +43,18 @@ function App() {
   }
 ];
 
-  // return React.createElement(
-  //   `div`, 
-  //   {
-  //     className: "app-container"
-  //   },
-  //   React.createElement(
-  //     "div", 
-  //     {
-  //       className: "app-container"
-  //     },
-  //     React.createElement('h3', {}, ""),
-  //     React.createElement(TaskViewer, { taskList: data })
-  //   )
-  // );
-
   return (
     <div className="app-container">
-      <h2>Task Manager</h2>
-      <TaskViewer taskList={data}/>
+      <div className='app-content'>
+        <TaskViewer taskList={data}/>
+
+        <div className='side-bar-right'>
+          <div className='card-xl'>
+            <h3>Create Task</h3>
+            <CreateTaskForm />
+          </div>
+        </div>
+      </div>
     </div>
   );
  }

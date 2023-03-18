@@ -21,7 +21,6 @@ function TaskCard (props) {
             <p>{props.name}</p>
         </div>
         <div className="card-footer">
-            <button onClick={handleClick}>ClickMe!</button>
             <DateContainer date={props.dueDate}/>
         </div>
     </div>
