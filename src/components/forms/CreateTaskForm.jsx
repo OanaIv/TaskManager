@@ -1,52 +1,24 @@
 import React, { useState } from "react"
 import "./CreateTaskForm.css"
 
-const CreateTaskForm = () => {
+const CreateTaskForm = (props) => {
     const [taskName, setTaskName] = useState("")
     const [dueDate, setDueDate] = useState("");
     const [taskDetails, setTaskDetails] = useState("")
 
-   /* const [formData, setFormData] = useState({
-        taskName: "",
-        dueDate: "", 
-        taskDetails: "",
-    }) */
-
     
     const handleNameChange = (event) => {
-
-        /* setFormData((prevState) => ({
-                ...prevState,
-                taskName: event.target.value,
-            })) */
         setTaskName(event.target.value)
     }
 
     const handleDateChange = (event) => {
-       /* setFormData((prevState) => ({
-            ...prevState,
-            dueDate: event.target.value,
-        })) */
         setDueDate(event.target.value)
     }
 
     const handleDetailsChange = (event) => {
-      /*  setFormData((prevState) => ({
-            ...prevState,
-            taskDetails: event.target.value,
-        })) */
          setTaskDetails(event.target.value)
     }
 
-    /* const handleInputChange = (event) => {
-
-        setFormData((prevState) => (
-            {
-            ...prevState,
-            [event.target.name]: event.target.value,
-            }
-        ))
-    } */
 
     const resetForm = () => {
         setTaskName("")
@@ -63,6 +35,8 @@ const CreateTaskForm = () => {
             taskDetails: taskDetails,
             status: 'ToDo'
         }
+
+        props.addNewTask(newTask)
 
         console.log("newTask =", newTask)
         resetForm()
