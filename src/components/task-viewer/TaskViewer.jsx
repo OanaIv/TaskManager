@@ -1,19 +1,13 @@
 import React from 'react';
-import TaskCard from '../task-card/TaskCard'
-import './TaskViewer.css'
+import TaskCard from '../task-card/TaskCard';
+import './TaskViewer.css';
+import ControlPanel from "../control-panel/ControlPanel";
 
 function TaskViewer(props) {
+
     return (
     <div className="task-viewer-container">
-        <div className='control-panel-container'>
-            <div>
-                <h3 className='view-title'>Tasks</h3>
-                <p className='subtitle'>Your task in your space</p>
-            </div>
-            <button onClick={props.onCreateClick} className='button-primary'>
-                Create Task
-            </button>
-        </div>
+       <ControlPanel onNewTaskAdd={props.onNewTaskAdd}/>
 
         <div className='task-list-container'>
             {props.taskList.map((item, index) => (
