@@ -1,31 +1,28 @@
 .task-viewer-container {
   background-color: #f3f3fb;
   border-radius: 50px;
-  padding: 40px;
-  overflow: auto;
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
-  scrollbar-width: none; /* Firefox */
+  padding: 40px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .task-viewer-container::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+  display: none; 
 }
 
 .task-list-container {
-    background-color: #f3f3fb;
+  padding: 0 40px;
+  flex: 1;
+  overflow: auto;
+}
 
-    display: flex;
-    justify-content: flex-start;
-    gap: 40px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-
-    max-width: 1780px;
-    max-height: 856px;
-
-    padding: 80px;
-    border-radius: 50px;
-    margin: 0 70px 70px 70px;
-  } 
-
+.task-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-auto-rows: minmax(min-content, max-content);
+  justify-items: flex-start;
+  justify-content: space-between;
+  gap: 40px 50px;
+}
   

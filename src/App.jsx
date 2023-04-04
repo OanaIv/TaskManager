@@ -4,7 +4,7 @@ import TaskViewer from './components/task-viewer/TaskViewer';
 /* import CreateTaskForm from './components/forms/CreateTaskForm';
 import Modal from "./components/modal/Modal" */
 
-const data = [
+/* const data = [
   {
     id: "T-1",
     name: "1Create a Design System for Enum Workspace.",
@@ -41,11 +41,11 @@ const data = [
     status: "complete",
     dueDate: new Date(2022, 6, 13)
   }
-];
+]; */
 
 function App() {
 
-  const [taskList, setTaskList] = useState(data);
+  const [taskList, setTaskList] = useState([]);
   
 
   const onNewTaskAdd = (newTask) => {
