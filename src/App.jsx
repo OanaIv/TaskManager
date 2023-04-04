@@ -4,11 +4,11 @@ import TaskViewer from './components/task-viewer/TaskViewer';
 /* import CreateTaskForm from './components/forms/CreateTaskForm';
 import Modal from "./components/modal/Modal" */
 
-/* const data = [
+const data = [
   {
     id: "T-1",
     name: "1Create a Design System for Enum Workspace.",
-    status: "todo",
+    status: "pending",
     dueDate: new Date(2022, 5, 23)
   },
   {
@@ -20,7 +20,7 @@ import Modal from "./components/modal/Modal" */
   {
     id: "T-3",
     name: "3Create a Design System for Enum Workspace.",
-    status: "complete",
+    status: "completed",
     dueDate: new Date(2022, 6, 13)
   },
   {
@@ -38,14 +38,14 @@ import Modal from "./components/modal/Modal" */
   {
     id: "T-6",
     name: "3Create a Design System for Enum Workspace.",
-    status: "complete",
+    status: "completed",
     dueDate: new Date(2022, 6, 13)
   }
-]; */
+];
 
 function App() {
 
-  const [taskList, setTaskList] = useState([]);
+  const [taskList, setTaskList] = useState(data);
   
 
   const onNewTaskAdd = (newTask) => {
